@@ -2,20 +2,15 @@ package com.example.dbDemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.retry.annotation.EnableRetry;
 
+@EnableCaching
+@EnableRetry
 @SpringBootApplication
-public class DbDemoApplication {
+public class BookApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DbDemoApplication.class, args);
+		SpringApplication.run(BookApplication.class, args);
 	}
-
-//	dependencies {
-//		compile('org.springframework.boot:spring-boot-starter-data-jpa')
-//		compile('org.springframework.boot:spring-boot-starter-data-rest')
-//		compile('org.springframework.boot:spring-boot-starter-web')
-//		runtime('com.h2database:h2')
-//		compileOnly('org.projectlombok:lombok')
-//		testCompile('org.springframework.boot:spring-boot-starter-test')
-//	}
 }
